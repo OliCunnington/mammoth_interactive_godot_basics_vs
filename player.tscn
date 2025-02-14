@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3khdo61ecv4p"]
+[gd_scene load_steps=3 format=3 uid="uid://d3khdo61ecv4p"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_c17mr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eothy"]
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 scale = Vector2(100, 100)
 mesh = SubResource("SphereMesh_c17mr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_eothy")
